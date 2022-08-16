@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSC NITA</title>
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" />
+    <link rel="stylesheet" href="../../../assets/css/quiz_style.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+    <!-- FontAweome CDN Link for Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body style="color: black">
+    <div class="childClass logo"><img src="../../../assets/logo.png" /></div>
+    <div class="loader" style="display: none">
+      <center>
+        <svg
+          version="1.1"
+          id="L6"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          enable-background="new 0 0 100 100"
+          xml:space="preserve"
+        >
+          <rect
+            fill="none"
+            stroke="#fff"
+            stroke-width="4"
+            x="25"
+            y="25"
+            width="50"
+            height="50"
+          >
+            <animateTransform
+              attributeName="transform"
+              dur="0.5s"
+              from="0 50 50"
+              to="180 50 50"
+              type="rotate"
+              id="strokeBox"
+              attributeType="XML"
+              begin="rectBox.end"
+            />
+          </rect>
+          <rect x="27" y="27" fill="#fff" width="46" height="50">
+            <animate
+              attributeName="height"
+              dur="1.3s"
+              attributeType="XML"
+              from="50"
+              to="0"
+              id="rectBox"
+              fill="freeze"
+              begin="0s;strokeBox.end"
+            />
+          </rect>
+        </svg>
+      </center>
+    </div>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+      <div class="info-title"><span>Some Rules of this Quiz</span></div>
+      <div class="info-list">
+        <div class="info">
+          1. You will have only <span>25 seconds</span> per question.
+        </div>
+        <div class="info">
+          2. Once you select your answer, it can't be undone.
+        </div>
+        <div class="info">
+          3. You can't select any option once time goes off.
+        </div>
+        <div class="info">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="info">
+          5. You'll get points on the basis of your correct answers.
+        </div>
+      </div>
+      <div class="buttons">
+        <!-- <button class="quit">Exit Quiz</button> -->
+        <button class="restart">Continue</button>
+      </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+      <header>
+        <div class="title" id="ML & AI">Machine Learning and AI Quiz</div>
+        <div class="timer">
+          <div class="time_left_txt">Time Left</div>
+          <div class="timer_sec">25</div>
+        </div>
+        <div class="time_line"></div>
+      </header>
+      <section>
+        <div class="que_text">
+          <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option_list">
+          <!-- Here I've inserted options from JavaScript -->
+        </div>
+      </section>
+
+      <!-- footer of Quiz Box -->
+      <footer>
+        <div class="total_que">
+          <!-- Here I've inserted Question Count Number from JavaScript -->
+        </div>
+        <button class="next_btn">Next Ques</button>
+      </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text">
+        <!-- Here I've inserted Score Result from JavaScript -->
+      </div>
+      <div class="buttons">
+        <!-- <button class="restart">Replay Quiz</button> -->
+        <button class="quit">Submit</button>
+      </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="js/questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+  </body>
+</html>

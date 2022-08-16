@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- 
+
+░░░░░░░░░░░░░░░░░░░░░░█████████░░░░░░░░░
+░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███░░░░░░░
+░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███░░░░
+░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██░░
+░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███░
+░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██
+░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██
+░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██
+██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██
+█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██░
+░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██░░░
+░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░
+░░████████████░░░█████████████████░░░░░░
+
+Thanks for taking the challenge!
+-->
+
+<!-- Meet the developers: -->
+<!-- https://github.com/bharat-1809 -->
+<!-- https://github.com/aryanVijaywargia -->
+<!-- https://github.com/Sygamar -->
+<!-- https://github.com/mrmayurgithub -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DSC NITA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="../assets/css/city_style.css" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" />
+  </head>
+  <body>
+    <audio
+      src="../assets/song-min.mp3"
+      type="audio/mpeg"
+      preload="auto"
+      loop
+      hidden
+    ></audio>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid fixed-top header disable-selection">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-md-6">
+          <div class="row" style="justify-content: center">
+            <div class="col" style="color: azure">
+              <div id="first_text" class="flip-scale-up-diag-1">
+                <h1><b>ERROR 501</b></h1>
+                <p>
+                  Connection to the server lost. If your progress isn't restored
+                  in the next 180 sec, kindly restart the challenge.<br />
+                  Establishing connection...
+                </p>
+                <center>
+                  <button
+                    style="padding: 0.5em; width: 7em; display: none"
+                    id="retry_btn"
+                  >
+                    Retry
+                  </button>
+                </center>
+              </div>
+              <div
+                id="second_text"
+                style="display: none"
+                class="flip-scale-up-diag-1"
+              >
+                <h1><b>Congratulations</b></h1>
+                <p>
+                  Just kidding, we are never gonna give you up! If you are
+                  shortlisted you will receive a call from DSC NITA!<br />
+                  <strong>Congratulations</strong> on completing the challenge.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+    <script src="https://github.com/mrdoob/three.js/blob/master/src/constants.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="../assets/js/city_script.js"></script>
+    <script>
+      const audio = document.querySelector("audio");
+      const retryBtn = document.getElementById("retry_btn");
+
+      (function () {
+        const second = 15000;
+        let daemonDate = new Date().getTime() + second;
+        x = setInterval(function () {
+          const now = new Date().getTime();
+          var distance = daemonDate - now;
+
+          if (distance < 0) {
+            retryBtn.style.display = "block";
+            clearInterval(x);
+          }
+        }, 0);
+      })();
+
+      retryBtn.onclick = async () => {
+        console.log("Trying to play audio");
+        await audio.play();
+
+        document.body.addEventListener("mousemove", async function (e) {
+          await audio.play();
+          console.log("Started audio playback");
+        });
+
+        if (audio.duration > 0 && !audio.paused) {
+          const first_text = document.getElementById("first_text");
+          const second_text = document.getElementById("second_text");
+
+          first_text.style.display = "none";
+          second_text.style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.input_container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  border: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}

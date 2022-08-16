@@ -1,0 +1,82 @@
+body {
+  background-color: #1f1f1f;
+  color: azure;
+  font-size: larger;
+}
+
+.childClass {
+  position: absolute;
+}
+
+.logo {
+  top: 30px;
+  left: 30px;
+}
+
+.loader {
+  margin-top: 20px;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+  display: inline;
+}
+
+li {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+}
+
+.flip-scale-up-diag-1 {
+  animation: flip-scale-up-diag-1 0.5s linear both;
+}
+
+/**
+ * ----------------------------------------
+ * animation flip-scale-up-diag-1
+ * ----------------------------------------
+ */
+@keyframes flip-scale-up-diag-1 {
+  0% {
+    transform: scale(1) rotate3d(1, 1, 0, 0deg);
+  }
+  25% {
+    transform: scale(1.75) rotate3d(1, 1, 0, 90deg);
+  }
+  50% {
+    transform: scale(2.5) rotate3d(1, 1, 0, 180deg);
+  }
+  75% {
+    transform: scale(1.75) rotate3d(1, 1, 0, 270deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+.card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 38%;
+  height: 28%;
+  color: #111;
+}
+
+.card_text {
+  display: none;
+}
+
+.card:hover + .card_text {
+   display: block; 
+}

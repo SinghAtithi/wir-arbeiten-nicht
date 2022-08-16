@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSC NITA</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico"/>
+    <link rel="stylesheet" href="../assets/css/form.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/character.css" />
+  </head>
+  <body>
+    <div class="childClass logo"><img src="../assets/logo.png" /></div>
+    <div style="display: flex; width: 100%; justify-content: center;">
+      <div class="astronaut"></div>
+      <div class="form" style="margin-left: 40px; margin-right: 15%;">
+        <div class="title">Yo friend, I am Jesse. Thanks for stopping by to help.</div>
+        <div class="subtitle">Hey, what's your name by the way?</div>
+        <div class="input-container ic1">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">First name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Last name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="email" class="placeholder">Email</label>
+        </div>
+        <button type="text" class="submit">Lets go!!</button>
+        <div class="loader" style="display: none">
+          <center>
+            <svg
+              version="1.1"
+              id="L6"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 100 100"
+              enable-background="new 0 0 100 100"
+              xml:space="preserve"
+            >
+              <rect
+                fill="none"
+                stroke="#fff"
+                stroke-width="4"
+                x="25"
+                y="25"
+                width="50"
+                height="50"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.5s"
+                  from="0 50 50"
+                  to="180 50 50"
+                  type="rotate"
+                  id="strokeBox"
+                  attributeType="XML"
+                  begin="rectBox.end"
+                />
+              </rect>
+              <rect x="27" y="27" fill="#fff" width="46" height="50">
+                <animate
+                  attributeName="height"
+                  dur="1.3s"
+                  attributeType="XML"
+                  from="50"
+                  to="0"
+                  id="rectBox"
+                  fill="freeze"
+                  begin="0s;strokeBox.end"
+                />
+              </rect>
+            </svg>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="../assets/js/form.js"></script>
+  </body>
+</html>
