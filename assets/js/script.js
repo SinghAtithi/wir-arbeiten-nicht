@@ -83,12 +83,12 @@ function getLink() {
 quit_quiz.onclick = async () => {
   var firebaseConfig = {
     apiKey: "AIzaSyBzxOml671Tfi8w5400mw8r9byvtgL3Iz8",
-      authDomain: "dsc-nita-2k22.firebaseapp.com",
-      projectId: "dsc-nita-2k22",
-      storageBucket: "dsc-nita-2k22.appspot.com",
-      messagingSenderId: "138506433405",
-      appId: "1:138506433405:web:10c3f4aa592c00a9521214",
-      measurementId: "G-PN39PGRHW4"
+    authDomain: "dsc-nita-2k22.firebaseapp.com",
+    projectId: "dsc-nita-2k22",
+    storageBucket: "dsc-nita-2k22.appspot.com",
+    messagingSenderId: "138506433405",
+    appId: "1:138506433405:web:10c3f4aa592c00a9521214",
+    measurementId: "G-PN39PGRHW4"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -122,7 +122,7 @@ quit_quiz.onclick = async () => {
       });
 
     loader.style.display = "none";
-    window.location.href = "";
+    window.location.href = "../../../kaafiSmart.html";
   }
 };
 
