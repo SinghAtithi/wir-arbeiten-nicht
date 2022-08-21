@@ -82,13 +82,13 @@ function getLink() {
 // if quitQuiz button clicked
 quit_quiz.onclick = async () => {
   var firebaseConfig = {
-    apiKey: "AIzaSyBlwNTjC9aJrNHMmUdATJHD38NT8YZKUSQ",
-    authDomain: "dsc-challenge-2021.firebaseapp.com",
-    projectId: "dsc-challenge-2021",
-    storageBucket: "dsc-challenge-2021.appspot.com",
-    messagingSenderId: "1089358080579",
-    appId: "1:1089358080579:web:45544cf2ad5ac8ca6c82f6",
-    measurementId: "G-YTHWPHFEN0",
+    apiKey: "AIzaSyBzxOml671Tfi8w5400mw8r9byvtgL3Iz8",
+      authDomain: "dsc-nita-2k22.firebaseapp.com",
+      projectId: "dsc-nita-2k22",
+      storageBucket: "dsc-nita-2k22.appspot.com",
+      messagingSenderId: "138506433405",
+      appId: "1:138506433405:web:10c3f4aa592c00a9521214",
+      measurementId: "G-PN39PGRHW4"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
